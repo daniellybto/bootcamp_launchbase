@@ -1,0 +1,38 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap";
+
+*{
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background: #FAF9F9;
+}
+
+a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+  color: #555B6E;
+}
+
+/* HEADER */
+
+header{
+  background-color: #BEE3DB;
+  padding: 30px;
+}
+header nav {
+  text-align: center;
+}
+header nav a {
+  padding: 30px;
+}
+
+header nav a:hover {
+  background: #89B0AE;
+  color: #FFD6BA;
+  transition: 400ms;
+}
