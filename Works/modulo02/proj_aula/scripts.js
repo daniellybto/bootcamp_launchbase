@@ -13,6 +13,3 @@ document.querySelector(".close-modal").addEventListener('click', () => {
   modalOverlay.classList.remove('active')
   modalOverlay.querySelector("iframe").src = ""
 })
-
-
-//<iframe width="560" height="315" src="https://www.youtube.com/embed/X3W-YFe2_io" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
