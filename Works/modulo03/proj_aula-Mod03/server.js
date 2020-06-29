@@ -43,6 +43,20 @@ server.get("/portfolio", function(req, res){
   return res.render("portfolio" , {items: videos} )
 })
 
+server.get("/video" , function(req, res){
+  const id = req.query.id
+
+  const video = videos.find(function(video){
+    //caso seja false irá pular essa condição!
+    return video.id == id
+  })
+
+  if (!video){
+    return res.send("VIDEO NOT FOUND!!")
+  }
+  return res.render("video", {item: video})
+    
+})
 
 
 // ---- CONFIGURAR PORTA DO SERVIDOR! ---- //
