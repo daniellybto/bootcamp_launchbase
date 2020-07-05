@@ -1,0 +1,40 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+  <div class="container">
+    <section class="banner">
+      <div class="infos">
+        <h1>As melhores Receitas</h1>
+        <p>Aprenda a construir os melhores pratos com receitas criadas por profissionais do mundo inteiro.</p>
+      </div>
+
+      <img src="assets/chef.png" alt="Chefe">
+
+    </section><!--/FIM section banner-->
+
+    <section class="mais-acessadas">
+      <h2>Mais Acessadas</h2>
+
+      <div class="cards">
+        
+        {% for receita in receitas.slice(0,6) %}
+
+          <div class="card" id="{{loop.index0}}">
+              <div class="card_img_container">
+                <img src="{{receita.image}}" alt="Imagem {{receita.title}}">
+              </div>
+              <div class="card_content">
+                <h4>{{receita.title}}</h4>
+                <p>{{receita.author}}</p>
+              </div>
+          </div>
+
+        {% endfor %}
+        
+      </div><!--/FIM CARDS-->
+    </section><!--/FIM section mais-acessadas-->
+
+  </div><!--/FIM container-->
+
+{% endblock content %}
+

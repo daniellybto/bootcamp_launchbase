@@ -1,0 +1,64 @@
+{% extends "layout.njk"%}
+
+{% block head%}
+  <title>RECEITA COMPLETA - Foodfy</title>
+{% endblock head%}
+
+{% block content %}
+  <div class="container">
+
+    <div class="receita_head">
+      <img src="{{receita.image}}" alt="Imagem {{receita.title}}">
+      <h2>{{receita.title}}</h2>
+      <p>{{receita.author}}</p>
+    </div>
+
+    <div class="card__receita">
+
+      <div class="card__content">
+        <div class="card__title">
+          <h4>Ingredientes</h4>
+          <a>ESCONDER</a>
+        </div>
+        <div class="card__description">
+          <ul>
+
+            {% for ingredientes in receita.ingredients %}
+              <li>{{ingredientes}}</li>
+            {% endfor %}
+
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card__content">
+        <div class="card__title">
+          <h4>Modo de Preparo</h4>
+          <a>ESCONDER</a>
+        </div>
+        <div class="card__description">
+          <ul>
+
+            {% for preparation in receita.preparation %}
+              <li>{{preparation}}</li>
+            {% endfor %}
+
+          </ul>
+        </div>
+      </div>
+      
+      <div class="card__content">
+        <div class="card__title">
+          <h4>Informações Adicionais</h4>
+          <a>ESCONDER</a>
+        </div>
+        <div class="card__description">
+          <p>{{receita.information }}<p>
+        </div>
+      </div>
+
+    </div><!--/FIM card__receita-->
+
+  </div><!--/FIM container-->
+  
+{% endblock content %}
